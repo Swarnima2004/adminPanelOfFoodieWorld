@@ -102,6 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                app:cardCornerRadius="@dimen/_15sdp"
                 app:layout_constraintEnd_toEndOf="@+id/selectimage"
                 app:layout_constraintStart_toStartOf="@+id/selectimage"
                 app:layout_constraintTop_toBottomOf="@+id/selectimage">
@@ -111,7 +112,7 @@
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:scaleType="fitCenter"
-                    tools:srcCompat="@drawable/add_image" />
+                    android:src="@drawable/add_image" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -208,12 +209,13 @@ Momos"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/backButtom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:background="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/arrow_back" />

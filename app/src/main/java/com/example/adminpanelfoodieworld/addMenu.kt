@@ -26,7 +26,7 @@ class addMenu : AppCompatActivity() {
         binding.backButtom.setOnClickListener {
             finish()
         }
-        binding.selectimage.setOnClickListener{
+        binding.selectedImage.setOnClickListener{
             pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
     }
