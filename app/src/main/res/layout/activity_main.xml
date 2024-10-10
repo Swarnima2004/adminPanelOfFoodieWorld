@@ -10,14 +10,14 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
+        android:id="@+id/CreateUser"
         android:layout_width="@dimen/_130sdp"
         android:layout_height="@dimen/_85sdp"
         android:layout_marginTop="32dp"
         app:cardCornerRadius="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/addAllMenu"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/cardView4"
+        app:layout_constraintStart_toEndOf="@+id/profile"
         app:layout_constraintTop_toBottomOf="@+id/addAllMenu">
 
 
@@ -54,7 +54,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
+        android:id="@+id/profile"
         android:layout_width="@dimen/_130sdp"
         android:layout_height="@dimen/_85sdp"
         android:layout_marginTop="32dp"
@@ -102,10 +102,10 @@
         android:layout_marginStart="54dp"
         android:layout_marginTop="32dp"
         app:cardCornerRadius="@dimen/_15sdp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView5"
+        app:layout_constraintEnd_toEndOf="@+id/CreateUser"
         app:layout_constraintHorizontal_bias="0.913"
-        app:layout_constraintStart_toEndOf="@+id/cardView6"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5">
+        app:layout_constraintStart_toEndOf="@+id/orderStatus"
+        app:layout_constraintTop_toBottomOf="@+id/CreateUser">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -144,8 +144,8 @@
         android:id="@+id/imageView"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/splash" />
@@ -155,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/yeon_sung"
         android:text="Foodie's World"
         android:textSize="@dimen/_25ssp"
@@ -246,7 +246,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/checkStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
@@ -269,9 +269,9 @@
                 android:text="30"
                 android:textSize="@dimen/_16ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/textView10"
-                app:layout_constraintStart_toStartOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                app:layout_constraintEnd_toEndOf="@+id/checkStatus"
+                app:layout_constraintStart_toStartOf="@+id/checkStatus"
+                app:layout_constraintTop_toBottomOf="@+id/checkStatus" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -397,13 +397,13 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
+        android:id="@+id/orderStatus"
         android:layout_width="@dimen/_130sdp"
         android:layout_height="@dimen/_85sdp"
         android:layout_marginTop="32dp"
         app:cardCornerRadius="@dimen/_15sdp"
-        app:layout_constraintStart_toStartOf="@+id/cardView4"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4">
+        app:layout_constraintStart_toStartOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@+id/profile">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.AdminPanelFoodieWorld"
         tools:targetApi="31">
         <activity
+            android:name=".pendingOrder"
+            android:exported="false" />
+        <activity
+            android:name=".newUser"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".outForDelivery"
+            android:exported="false" />
+        <activity
             android:name=".allItemActivity"
             android:exported="false" />
         <activity
@@ -26,6 +38,9 @@
             android:exported="false" />
         <activity
             android:name=".splashScreen"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,9 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

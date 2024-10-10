@@ -25,9 +25,23 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,addMenu::class.java)
             startActivity(intent)
         }
+        binding.profile.setOnClickListener {
+            val intent = Intent(this,profile::class.java)
+            startActivity(intent)
+        }
 
         binding.addAllMenu.setOnClickListener {
             val intent = Intent(this,allItemActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.orderStatus.setOnClickListener {
+            val intent = Intent(this,outForDelivery::class.java)
+            startActivity(intent)
+        }
+
+        binding.CreateUser.setOnClickListener {
+            val intent = Intent(this,newUser::class.java)
             startActivity(intent)
         }
     }
