@@ -44,5 +44,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,newUser::class.java)
             startActivity(intent)
         }
+        binding.pendingorder.setOnClickListener {
+            val intent = Intent(this,pendingOrder::class.java)
+            startActivity(intent)
+        }
     }
 }

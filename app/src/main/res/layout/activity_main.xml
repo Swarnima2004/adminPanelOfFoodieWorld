@@ -184,8 +184,8 @@
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
                 app:layout_constraintEnd_toStartOf="@+id/imageView5"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -246,10 +246,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
             <TextView
-                android:id="@+id/checkStatus"
+                android:id="@+id/pendingorder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/yeon_sung"
                 android:text="Pending \norder"
@@ -257,6 +257,7 @@
                 android:textColor="@color/green"
                 android:textSize="@dimen/_16ssp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                app:layout_constraintHorizontal_bias="0.444"
                 app:layout_constraintStart_toStartOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -269,9 +270,9 @@
                 android:text="30"
                 android:textSize="@dimen/_16ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/checkStatus"
-                app:layout_constraintStart_toStartOf="@+id/checkStatus"
-                app:layout_constraintTop_toBottomOf="@+id/checkStatus" />
+                app:layout_constraintEnd_toEndOf="@+id/pendingorder"
+                app:layout_constraintStart_toStartOf="@+id/pendingorder"
+                app:layout_constraintTop_toBottomOf="@+id/pendingorder" />
 
             <TextView
                 android:id="@+id/textView12"

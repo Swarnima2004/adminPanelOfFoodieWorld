@@ -24,19 +24,20 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/FoodPic"
                 android:layout_width="92dp"
                 android:layout_height="94dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/burger" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/nameOfCustomer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -45,11 +46,11 @@
                 android:text="Customer Name"
 
                 android:textSize="@dimen/_13ssp"
-                app:layout_constraintStart_toEndOf="@+id/imageView8"
-                app:layout_constraintTop_toTopOf="@+id/imageView8" />
+                app:layout_constraintStart_toEndOf="@+id/FoodPic"
+                app:layout_constraintTop_toTopOf="@+id/FoodPic" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -58,13 +59,13 @@
 
                 android:text="Quantity"
                 android:textSize="@dimen/_10ssp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-                app:layout_constraintStart_toEndOf="@+id/imageView8"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                app:layout_constraintBottom_toBottomOf="@+id/FoodPic"
+                app:layout_constraintStart_toEndOf="@+id/FoodPic"
+                app:layout_constraintTop_toBottomOf="@+id/nameOfCustomer" />
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/logbtn"
+                android:id="@+id/Acceptbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="40dp"
@@ -79,18 +80,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/Quantity"
+                android:id="@+id/OrderPending"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="24dp"
                 android:fontFamily="@font/lato_bold"
                 android:text="3"
                 android:textColor="@color/textcolor"
                 android:textSize="@dimen/_16ssp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView18"
-                app:layout_constraintStart_toEndOf="@+id/textView18"
-                app:layout_constraintTop_toTopOf="@+id/textView18"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintBottom_toBottomOf="@+id/quantity"
+                app:layout_constraintStart_toEndOf="@+id/quantity"
+                app:layout_constraintTop_toTopOf="@+id/quantity"
+                app:layout_constraintVertical_bias="0.4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
