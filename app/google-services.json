@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "872909525520",
+    "project_id": "foodie-world-5d5ed",
+    "storage_bucket": "foodie-world-5d5ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872909525520:android:dc79225340e23c8a667095",
+        "android_client_info": {
+          "package_name": "com.example.adminpanelfoodieworld"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnjjg6KYfdYI2BhSr3UR_sgRcqgliFkJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

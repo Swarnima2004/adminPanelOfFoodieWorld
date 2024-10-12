@@ -79,7 +79,7 @@
 
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/emailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_25sdp"
@@ -97,11 +97,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
 
-            app:layout_constraintStart_toStartOf="@+id/editTextText2"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+            app:layout_constraintStart_toStartOf="@+id/restaurentName"
+            app:layout_constraintTop_toBottomOf="@+id/restaurentName" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_25sdp"
@@ -116,13 +116,13 @@
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:padding="@dimen/_5sdp"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/emailAddress"
             app:layout_constraintHorizontal_bias="0.657"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+            app:layout_constraintStart_toStartOf="@+id/emailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/ownerName"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:layout_marginStart="@dimen/_25sdp"
@@ -143,7 +143,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/restaurentName"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:layout_marginStart="@dimen/_25sdp"
@@ -158,9 +158,9 @@
             android:inputType="text"
             android:minHeight="48dp"
             android:padding="@dimen/_5sdp"
-            app:layout_constraintEnd_toEndOf="@+id/editTextText"
-            app:layout_constraintStart_toStartOf="@+id/editTextText"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+            app:layout_constraintEnd_toEndOf="@+id/ownerName"
+            app:layout_constraintStart_toStartOf="@+id/ownerName"
+            app:layout_constraintTop_toBottomOf="@+id/ownerName" />
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -174,10 +174,10 @@
             android:text="Create Account"
             android:textColor="@color/white"
             android:textSize="@dimen/_15ssp"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+            app:layout_constraintEnd_toEndOf="@+id/Password"
             app:layout_constraintHorizontal_bias="0.325"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+            app:layout_constraintStart_toStartOf="@+id/Password"
+            app:layout_constraintTop_toBottomOf="@+id/Password" />
 
         <TextView
             android:id="@+id/alreadyHaveAccount"
