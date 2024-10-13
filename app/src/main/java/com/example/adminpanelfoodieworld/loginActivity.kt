@@ -117,9 +117,6 @@ class loginActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateUi(user: FirebaseUser?) {
-        startActivity(Intent(this,MainActivity::class.java))
-    }
 
     //launcher for the google signin
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
@@ -133,7 +130,7 @@ class loginActivity : AppCompatActivity() {
                     if(authTask.isSuccessful){
                         Toast.makeText(this, "Successfully sign-in with google ", Toast.LENGTH_SHORT).show()
 
-                        updateUi(null)
+                        updateUi(authTask.result?.user)
                     }
                     else{
                         Toast.makeText(this, "Google Sign-in Failed", Toast.LENGTH_SHORT).show()
@@ -145,6 +142,18 @@ class loginActivity : AppCompatActivity() {
         }
     }
     // checking whether the user in logged in or not
+  override fun onStart(){
+      super.onStart()
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
+  }
+    private fun updateUi(user: FirebaseUser?) {
+        startActivity(Intent(this,MainActivity::class.java))
+        finish()
+    }
 
 
 }
