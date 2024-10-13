@@ -34,7 +34,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextText3"
+                android:id="@+id/foodNameText"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_55sdp"
                 android:layout_marginStart="8dp"
@@ -55,7 +55,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
             <EditText
-                android:id="@+id/editTextText4"
+                android:id="@+id/foodPriceText"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_55sdp"
                 android:layout_marginStart="8dp"
@@ -71,9 +71,9 @@
                 android:outlineSpotShadowColor="@color/textcolor"
                 android:paddingLeft="@dimen/_10sdp"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/editTextText3"
-                app:layout_constraintStart_toStartOf="@+id/editTextText3"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+                app:layout_constraintEnd_toEndOf="@+id/foodNameText"
+                app:layout_constraintStart_toStartOf="@+id/foodNameText"
+                app:layout_constraintTop_toBottomOf="@+id/foodNameText" />
 
             <TextView
                 android:id="@+id/selectimage"
@@ -93,9 +93,9 @@
                 android:paddingRight="@dimen/_15sdp"
                 android:text="Select The Food Image"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@id/editTextText4"
-                app:layout_constraintStart_toStartOf="@+id/editTextText4"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+                app:layout_constraintEnd_toEndOf="@id/foodPriceText"
+                app:layout_constraintStart_toStartOf="@+id/foodPriceText"
+                app:layout_constraintTop_toBottomOf="@+id/foodPriceText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView7"
@@ -119,7 +119,7 @@
                 android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
-                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/text_background"
@@ -135,19 +135,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/cardView7" />
 
             <EditText
-                android:id="@+id/editTextText5"
-                android:layout_width="wrap_content"
+                android:id="@+id/description"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-               android:paddingLeft="@dimen/_8sdp"
-                android:paddingRight="@dimen/_8sdp"
                 android:background="@null"
+                android:hint="Add Here The  Description"
 
 
-                android:text="Lorem ipsum dolor sit amet,
-consectetur adipiscing elit,
-sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad"
+
+                android:paddingRight="@dimen/_8sdp"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/textView16"
                 app:layout_constraintStart_toStartOf="@+id/textView16"
@@ -157,7 +154,7 @@ ut labore et dolore magna aliqua. Ut enim ad"
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
-                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/text_background"
@@ -169,28 +166,24 @@ ut labore et dolore magna aliqua. Ut enim ad"
                 android:text="Ingredients"
                 android:textSize="@dimen/_17sdp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/editTextText5"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+                app:layout_constraintStart_toStartOf="@+id/description"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
 
             <EditText
-                android:id="@+id/editTextText6"
+                android:id="@+id/ingredients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@null"
-                android:text="Noddle\n
-Salad\n
-Burger\n
-Herbal Pan Cake\n
-Momos"
-                android:textColor="@color/black"
+                android:hint="Add Here The Ingredients"
+               android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.06"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button3"
+                android:id="@+id/addItemBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -207,7 +200,7 @@ Momos"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
+                app:layout_constraintTop_toBottomOf="@+id/ingredients" />
 
             <ImageButton
                 android:id="@+id/backButtom"
