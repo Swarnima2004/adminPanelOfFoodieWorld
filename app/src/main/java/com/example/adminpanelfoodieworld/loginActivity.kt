@@ -18,10 +18,14 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.database
 
 class loginActivity : AppCompatActivity() {
-     private lateinit var email : String
-     private lateinit var password : String
-     private lateinit var auth : FirebaseAuth
-     private lateinit var database : DatabaseReference
+    private  var username: String?= null
+    private var nameOfRestaurent: String?= null
+    private lateinit var email : String
+    private lateinit var password : String
+    private lateinit var auth : FirebaseAuth
+    private lateinit var database : DatabaseReference
+
+
 
 
     private val binding: ActivityLoginBinding by lazy{
@@ -59,8 +63,8 @@ class loginActivity : AppCompatActivity() {
             startActivity(intent)
 
 
+        }
     }
-}
 
     private fun createUserAccount(email: String, password: String) {
         auth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task->
@@ -74,7 +78,7 @@ class loginActivity : AppCompatActivity() {
                         val user: FirebaseUser? = auth.currentUser
                         saveUserData()
                         updateUi(user)
-                        Toast.makeText(this, "User created", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "User created Successfully and loggedin", Toast.LENGTH_SHORT).show()
                     }else{
                         Toast.makeText(this,"Authentication failed",Toast.LENGTH_SHORT).show()
                         Log.d("Account","createAccount: Authentication failed",task.exception)
@@ -88,7 +92,7 @@ class loginActivity : AppCompatActivity() {
         email = binding.email.text.toString().trim()
         password = binding.Password.text.toString().trim()
 
-        val user = UserModel(email,password)
+        val user = UserModel(username, nameOfRestaurent ,email,password)
         val userId : String? = FirebaseAuth.getInstance().currentUser?.uid
         userId?.let{
             database.child("user").child(it).setValue(user)
@@ -96,6 +100,6 @@ class loginActivity : AppCompatActivity() {
     }
 
     private fun updateUi(user: FirebaseUser?) {
-       startActivity(Intent(this,MainActivity::class.java))
+        startActivity(Intent(this,MainActivity::class.java))
     }
 }
