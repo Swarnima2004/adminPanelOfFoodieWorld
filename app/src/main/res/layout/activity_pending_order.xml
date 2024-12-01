@@ -26,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeon_sung"
-        android:text="Pending Order"
-        android:textSize="@dimen/_35sdp"
+        android:text="Out For Delivery"
+        android:textSize="@dimen/_25sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

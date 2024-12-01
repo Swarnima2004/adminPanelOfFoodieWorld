@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +25,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/FoodPic"
+                android:id="@+id/FoodPics"
                 android:layout_width="92dp"
                 android:layout_height="94dp"
                 android:layout_marginStart="16dp"
@@ -34,10 +35,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/burger" />
 
             <TextView
-                android:id="@+id/nameOfCustomer"
+                android:id="@+id/foodname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -46,41 +48,39 @@
                 android:text="Customer Name"
 
                 android:textSize="@dimen/_13ssp"
-                app:layout_constraintStart_toEndOf="@+id/FoodPic"
-                app:layout_constraintTop_toTopOf="@+id/FoodPic" />
+                app:layout_constraintStart_toEndOf="@+id/FoodPics"
+                app:layout_constraintTop_toTopOf="@+id/FoodPics" />
+
 
             <TextView
                 android:id="@+id/quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/lato"
-
-                android:text="Total Pay"
+                android:text="Quantities"
                 android:textSize="@dimen/_10ssp"
-                app:layout_constraintBottom_toBottomOf="@+id/FoodPic"
-                app:layout_constraintStart_toEndOf="@+id/FoodPic"
-                app:layout_constraintTop_toBottomOf="@+id/nameOfCustomer" />
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/Acceptbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/btn_background"
-                android:elevation="@dimen/_10sdp"
-                android:fontFamily="@font/yeon_sung"
-                android:text="Accept"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_13ssp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBottom_toBottomOf="@+id/FoodPics"
+                app:layout_constraintStart_toEndOf="@+id/FoodPics"
+                app:layout_constraintTop_toBottomOf="@+id/foodname" />
 
             <TextView
-                android:id="@+id/OrderPending"
+                android:id="@+id/foodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/yeon_sung"
+                android:text="10$"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/FoodPics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/FoodPics" />
+
+            <TextView
+                android:id="@+id/foodQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
