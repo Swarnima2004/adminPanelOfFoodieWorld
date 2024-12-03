@@ -7,16 +7,21 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.adminpanelfoodieworld.databinding.DeliveryitemBinding
 
-class deliveryAdapter(private val customer:ArrayList<String>,private val moneyStatus:ArrayList<String>):RecyclerView.Adapter<deliveryAdapter.deliveryViewHolder>() {
+class deliveryAdapter(private val customer:MutableList<String>,private val moneyStatus:MutableList<Boolean>):RecyclerView.Adapter<deliveryAdapter.deliveryViewHolder>() {
    inner class deliveryViewHolder(private val binding : DeliveryitemBinding):RecyclerView.ViewHolder(binding.root) {
        fun bind(position: Int) {
            binding.apply{
                customerName.text=customer[position]
-               status.text = moneyStatus[position]
+               if(moneyStatus[position] == true){
+                   status.text = "recevied"
+               }else{
+                   status.text = "notReceived"
+               }
+
                val colorMap = mapOf(
-                   "recevied" to Color.GREEN,
-                   "notRecevied" to Color.RED,
-                   "pending" to Color.GRAY
+                  true  to Color.GREEN,
+                   false to Color.RED
+
 
                )
 

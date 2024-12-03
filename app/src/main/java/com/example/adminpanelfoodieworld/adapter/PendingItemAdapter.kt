@@ -20,6 +20,8 @@ class PendingItemAdapter(
 ) : RecyclerView.Adapter<PendingItemAdapter.PendingItemViewHolder>() {
 interface onItemClick{
     fun onItemClickListener(position: Int)
+    fun onItemAcceptClickListener(position: Int)
+    fun onDispatchItemClickListener(position: Int)
 }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PendingItemViewHolder {
         val binding = PendingitemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -57,10 +59,12 @@ interface onItemClick{
                             text = "Dispatch"
                             Accepted = true
                             showTheToast("YOUR ORDER IS ACCEPTED")
+                            Itemclicked.onItemAcceptClickListener(position)
                         } else {
                             CustomerName.removeAt(adapterPosition)
                             notifyItemRemoved(adapterPosition)
                             showTheToast("ORDER IS DISPATCH")
+                            Itemclicked.onDispatchItemClickListener(position)
                         }
                     }
                 }
