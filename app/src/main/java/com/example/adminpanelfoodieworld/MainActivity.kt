@@ -33,10 +33,18 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        auth = FirebaseAuth.getInstance()
         binding.addMenu.setOnClickListener {
             val intent = Intent(this, addMenu::class.java)
             startActivity(intent)
         }
+
+        binding.logoutBtn.setOnClickListener {
+        auth.signOut()
+        startActivity(Intent(this,signinActivity::class.java))
+        finish()
+        }
+
         binding.profile.setOnClickListener {
             val intent = Intent(this, profile::class.java)
             startActivity(intent)

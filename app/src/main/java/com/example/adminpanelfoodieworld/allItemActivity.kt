@@ -2,6 +2,7 @@ package com.example.adminpanelfoodieworld
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -72,8 +73,24 @@ class allItemActivity : AppCompatActivity() {
     }
 
     private fun setAdapter() {
-        val adapter = MenuitemAdapter(this@allItemActivity,menuItems,databaseReference)
+        val adapter = MenuitemAdapter(this@allItemActivity,menuItems,databaseReference){ position ->
+            deleteMenuItem(position)
+        }
         binding.allItemRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.allItemRecyclerView.adapter = adapter
+    }
+
+    private fun deleteMenuItem(position: Int) {
+        val menuItemToDelete = menuItems[position]
+        val menuItemKey = menuItemToDelete.key
+        val foodMenuReference = database.reference.child("menu").child(menuItemKey!!)
+        foodMenuReference.removeValue().addOnCompleteListener { task ->
+            if(task.isSuccessful){
+                menuItems.removeAt(position)
+                binding.allItemRecyclerView.adapter?.notifyItemRemoved(position)
+            }else{
+                Toast.makeText(this, "Item not Deleted", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
